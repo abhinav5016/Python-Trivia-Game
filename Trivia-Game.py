@@ -1,0 +1,196 @@
+import random
+
+python_questions = {
+    "variables_and_data_types": {
+        "What keyword is used to assign a value to a variable?": "=",
+        "Which data type stores True or False?": "boolean",
+        "What data type is 3.14?": "float",
+        "What data type is 'hello'?": "string",
+        "What function checks a variable's type?": "type",
+        "What keyword shows no value?": "none",
+        "What data type is 10?": "int",
+        "What converts a value to an integer?": "int",
+        "What converts a value to a string?": "str",
+        "What data type is [1,2,3]?": "list",
+    },
+    "operators": {
+        "Which operator adds two numbers?": "+",
+        "Which operator divides and returns integer result?": "//",
+        "Which operator finds remainder?": "%",
+        "Which operator compares equality?": "==",
+        "Which operator means not equal?": "!=",
+        "Which operator raises power?": "**",
+        "Which logical operator means AND?": "and",
+        "Which logical operator means OR?": "or",
+        "Which operator increments concatenation for strings?": "+",
+        "Which operator multiplies strings? (e.g. 'a'*3)": "*",
+    },
+    "conditions": {
+        "Which keyword starts a conditional statement?": "if",
+        "Which keyword means otherwise?": "else",
+        "Which keyword means 'otherwise if'?": "elif",
+        "What symbol is used for indentation blocks?": "colon",
+        "What evaluates to True or False?": "condition",
+        "Which operator checks greater than?": ">",
+        "Which operator checks less than?": "<",
+        "Which operator checks greater or equal?": ">=",
+        "Which operator checks less or equal?": "<=",
+        "What keyword ends a conditional block logically?": "else",
+    },
+    "loops": {
+        "Which keyword starts a for loop?": "for",
+        "Which keyword starts a while loop?": "while",
+        "Which keyword skips to next iteration?": "continue",
+        "Which keyword exits a loop?": "break",
+        "Which keyword creates a sequence of numbers?": "range",
+        "Which loop runs until condition becomes false?": "while",
+        "Which loop iterates over items?": "for",
+        "Which keyword defines the loop body?": "colon",
+        "What structure can loops iterate over (e.g., list)?": "iterable",
+        "Which function returns length used in loops?": "len",
+    },
+    "strings": {
+        "Which operator concatenates strings?": "+",
+        "Which method converts string to uppercase?": "upper",
+        "Which method converts string to lowercase?": "lower",
+        "Which method removes surrounding spaces?": "strip",
+        "Which method returns string length?": "len",
+        "Which operator repeats a string?": "*",
+        "Which method finds a substring?": "find",
+        "What are characters accessed with (e.g., s[0])?": "index",
+        "Which method splits a string?": "split",
+        "Which method joins strings?": "join",
+    },
+    "lists_tuples_sets": {
+        "Which brackets define a list?": "[]",
+        "Which brackets define a tuple?": "()",
+        "Which brackets define a set?": "{}",
+        "Which method adds an item to a list?": "append",
+        "Which method removes and returns last list item?": "pop",
+        "Are tuples mutable or immutable?": "immutable",
+        "Are lists mutable or immutable?": "mutable",
+        "Which method sorts a list?": "sort",
+        "Which function returns list length?": "len",
+        "Which keyword checks membership?": "in",
+    },
+    "dictionaries": {
+        "Which brackets define a dictionary?": "{}",
+        "What are dictionary key-value pairs separated with?": ":",
+        "Which method gets a value safely?": "get",
+        "Which method returns all keys?": "keys",
+        "Which method returns all values?": "values",
+        "Which method returns key-value pairs?": "items",
+        "Dictionaries are mutable or immutable?": "mutable",
+        "What do we call the first part of a pair?": "key",
+        "What do we call the second part?": "value",
+        "What keyword checks if a key exists?": "in",
+    },
+    "functions": {
+        "Which keyword defines a function?": "def",
+        "Which keyword returns a value?": "return",
+        "What do you call inputs to a function?": "parameters",
+        "Which brackets follow the function name?": "()",
+        "What is a function that calls itself?": "recursion",
+        "What stores reusable code?": "function",
+        "What keyword creates a temporary placeholder function?": "pass",
+        "What do you call data passed to a function?": "arguments",
+        "What is code inside a function called?": "body",
+        "A function with no return returns what?": "none",
+    },
+    "modules_imports": {
+        "Which keyword imports modules?": "import",
+        "Which keyword imports specific items?": "from",
+        "Which function lists module attributes?": "dir",
+        "Which module generates random numbers?": "random",
+        "Which module handles math operations?": "math",
+        "Which module handles dates and times?": "datetime",
+        "Which keyword renames modules?": "as",
+        "Which file extension represents Python modules?": ".py",
+        "What do we call external code files?": "modules",
+        "Which statement reloads a module?": "import",
+    },
+    "exceptions": {
+        "Which keyword starts exception handling?": "try",
+        "Which keyword catches errors?": "except",
+        "Which keyword runs if no error occurs?": "else",
+        "Which keyword always executes?": "finally",
+        "Which error occurs when dividing by zero?": "zerodivisionerror",
+        "Which error occurs for wrong index?": "indexerror",
+        "Which error occurs for wrong type?": "typeerror",
+        "Which keyword raises an exception?": "raise",
+        "Which error occurs when key not found?": "keyerror",
+        "Which error occurs when file not found?": "filenotfounderror",
+    },
+}
+
+
+# Quiz function
+def python_trivia_game(topic):
+    print("Welcome to the Trivia Game!")
+
+    question_dict = python_questions[topic]
+    question_list = list(question_dict.items())
+    random.shuffle(question_list)
+    total_questions = 10
+    score = 0
+
+    print(f"\n---{topic.upper()} QUIZ ---\n")
+
+    for idx, (question, correct_answer) in enumerate(question_list[:total_questions]):
+        print(f"{idx + 1}. {question}")
+
+        user_answer = input("Your answer: ").lower().strip()
+
+        # stop game
+        if user_answer == "exit":
+            print("Game stopped. Thankyou!.")
+            break
+
+        if user_answer == correct_answer.lower():
+            print("Correct!\n")
+            score += 1
+        else:
+            print(f"Wrong!. The correct Answer is: {correct_answer}.\n")
+
+    print(f"Game Over! Your final score is: {score}/{total_questions}\n")
+
+
+# Main Game loop
+topics_list = list(python_questions.keys())
+
+while True:
+    print("Welcome to the Trivia Game!")
+    print("Choose a Topic: ")
+    for i, t in enumerate(topics_list, 1):
+        print(f"{i}. {t.capitalize()}")
+
+    user_choice = (
+        input("Enter a topic number or name from the list above: ").lower().strip()
+    )
+
+    # If user enter number
+    if user_choice.isdigit():
+        num = int(user_choice)
+        if 1 <= num <= len(topics_list):
+            topic = topics_list[num - 1]
+        else:
+            print("Invalid number. Try again.\n")
+            continue
+
+    # If user enter topic name
+    else:
+        matched_topics = [t for t in topics_list if t.lower() == user_choice]
+        if matched_topics:
+            topic = matched_topics[0]
+        else:
+            print("Invalid number. Try again.\n")
+            continue
+
+    # run quiz
+    python_trivia_game(topic)
+
+    # Play Again?
+    again = input("Do you want to play again? (yes/no): ").lower().strip()
+    if again != "yes":
+        print("Okay! Thankyou.")
+        break
