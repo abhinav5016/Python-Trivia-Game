@@ -1,2 +1,85 @@
-# Python-Trivia-Game
-Python Trivia Game: A command-line quiz to test your Python skills. Covers variables, operators, loops, strings, lists, functions, modules, and exceptions. Get 10 random questions per quiz, type exit anytime, and track your score. Fun, interactive, and educational!
+# Python Trivia Game
+
+
+## Overview
+A simple, interactive command-line **Python Trivia Quiz Game** designed to help beginners learn Python fundamentals through questions and answers.
+
+
+## Features
+* 10 topics covering Python basics
+* 100+ questions
+* Randomized question order
+* Score tracking
+* "exit" command to stop the quiz anytime
+* Play-again option without restarting the program
+
+---
+
+## How to Run
+```bash
+git clone <your repo link>
+cd python-trivia-game
+python trivia_game.py
+```
+
+Requirements:
+* Python 3.6 or higher
+
+---
+
+## Topics Included
+* Variables & Data Types
+* Operators
+* Conditions
+* Loops
+* Strings
+* Lists, Tuples, Sets
+* Dictionaries
+* Functions
+* Modules & Imports
+* Exceptions
+
+---
+
+## Exit Command
+Type:
+
+```
+exit
+```
+to stop the ongoing quiz immediately.
+
+---
+
+## Project Structure
+
+```
+python-trivia-game/
+│── trivia_game.py
+│── README.md
+│── LICENSE
+└── assets/
+      └── screenshot.png
+```
+
+---
+
+## License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## Future Enhancements
+
+* Difficulty levels
+* GUI version
+* Leaderboard
+* Timer-based questions
+* Uploading scores online
+
+
+------------------------------------------------------------------------------------------
+Need any support, Contact on Instagram.
+
+Thankyou..
