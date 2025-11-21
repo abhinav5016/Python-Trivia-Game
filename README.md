@@ -1,4 +1,9 @@
 # Python Trivia Game
+![Python](https://img.shields.io/badge/python-3.11-blue)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Repo Size](https://img.shields.io/github/repo-size/abhinav5016/Python-Trivia-Game)
+![Issues](https://img.shields.io/github/issues/abhinav5016/Python-Trivia-Game)
+![Last Commit](https://img.shields.io/github/last-commit/abhinav5016/Python-Trivia-Game)
 
 
 ## Overview
