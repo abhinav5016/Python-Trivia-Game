@@ -22,8 +22,8 @@ A simple, interactive command-line **Python Trivia Quiz Game** designed to help 
 
 ## How to Run
 ```bash
-git clone <your repo link>
-cd python-trivia-game
+git clone https://github.com/abhinav5016/Python-Trivia-Game.git
+cd Python-Trivia-Game
 python trivia_game.py
 ```
 
